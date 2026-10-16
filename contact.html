@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact | Flavoria Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600&family=Hind+Siliguri:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="contact">
+    <main id="main" class="">
+      <h1>Contact</h1>
+      <div class="cols">
+        <div>
+          <p>📞 <span id="cp"></span></p>
+          <p>✉️ <a id="ce"></a></p>
+          <p>
+            💬 <a id="cw" target="_blank" rel="noopener">WhatsApp</a> ·
+            <a id="cf" target="_blank" rel="noopener">Facebook</a>
+          </p>
+          <p id="ca"></p>
+        </div>
+        <form id="cf2" novalidate>
+          <label for="n">Name *</label><input id="n" /><label for="m"
+            >Message *</label
+          ><textarea id="m" rows="4"></textarea>
+          <p class="err" id="er"></p>
+          <button class="btn" type="submit">Send by email</button>
+        </form>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          cp.textContent = CONFIG.phone;
+          ce.textContent = CONFIG.email;
+          ce.href = "mailto:" + CONFIG.email;
+          cw.href = "https://wa.me/" + CONFIG.whatsapp;
+          cf.href = CONFIG.facebook;
+          ca.textContent = CONFIG.address + " · " + CONFIG.hours;
+          cf2.onsubmit = (e) => {
+            e.preventDefault();
+            if (!n.value.trim() || !m.value.trim()) {
+              er.textContent = "Enter your name and message.";
+              return;
+            }
+            er.textContent = "";
+            location.href =
+              "mailto:" +
+              CONFIG.email +
+              "?subject=" +
+              encodeURIComponent("Enquiry from " + n.value) +
+              "&body=" +
+              encodeURIComponent(m.value);
+          };
+        });
+      </script>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

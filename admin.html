@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Admin | Flavoria</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Admin</h1>
+      <div id="login" class="box">
+        <label for="key">Admin key</label
+        ><input id="key" type="password" autocomplete="off" />
+        <p class="err" id="le"></p>
+        <button class="btn" id="enter">Sign in</button>
+      </div>
+      <div id="panel" hidden>
+        <p>
+          <button class="btn ghost" id="tabO">Orders</button>
+          <button class="btn ghost" id="tabP">Products</button>
+          <button class="link" id="out">Sign out</button>
+        </p>
+        <div id="orders"></div>
+        <div id="prods" hidden></div>
+      </div>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

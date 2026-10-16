@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Menu | Flavoria Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600&family=Hind+Siliguri:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="menu">
+    <main id="main" class="">
+      <h1>Our Menu</h1>
+      <div class="tools">
+        <label class="skip" for="q">Search</label
+        ><input id="q" type="search" placeholder="Search dishes…" /><label
+          class="skip"
+          for="cat"
+          >Category</label
+        ><select id="cat"></select
+        ><label class="skip" for="sort">Sort</label
+        ><select id="sort">
+          <option value="">Sort by price</option>
+          <option value="asc">Low to high</option>
+          <option value="desc">High to low</option>
+        </select>
+      </div>
+      <div class="grid" id="grid"></div>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+@media(max-width:800px){h1{font-size:2rem}.burger{display:block}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px;gap:12px;border-bottom:1px solid var(--line)}nav.open{display:flex}
+ .hero,.cols,.detail{grid-template-columns:1fr}.line{grid-template-columns:1fr 1fr}.top{justify-content:center;font-size:.72rem}}

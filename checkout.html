@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Checkout | Flavoria Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600&family=Hind+Siliguri:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="checkout">
+    <main id="main" class="">
+      <h1>Checkout</h1>
+      <div class="cols">
+        <form id="form" novalidate class="pay">
+          <label for="name">Full name *</label
+          ><input id="name" name="name" autocomplete="name" />
+          <p class="err" id="e-name"></p>
+          <label for="phone">Phone number *</label
+          ><input id="phone" name="phone" inputmode="tel" autocomplete="tel" />
+          <p class="err" id="e-phone"></p>
+          <label for="email">Email (optional)</label
+          ><input id="email" name="email" type="email" />
+          <p class="err" id="e-email"></p>
+          <label for="address">Delivery address *</label
+          ><textarea id="address" name="address" rows="2"></textarea>
+          <p class="err" id="e-address"></p>
+          <label for="area">City / area *</label><input id="area" name="area" />
+          <p class="err" id="e-area"></p>
+          <label for="notes">Order notes (optional)</label
+          ><textarea id="notes" name="notes" rows="2"></textarea>
+          <fieldset>
+            <legend>Payment method *</legend>
+            <label class="opt"
+              ><input type="radio" name="method" value="whatsapp" /> WhatsApp
+              order</label
+            ><label class="opt"
+              ><input type="radio" name="method" value="bkash" /> Manual bKash
+              payment</label
+            ><label class="opt" id="codopt"
+              ><input type="radio" name="method" value="cod" /> Cash on
+              delivery</label
+            >
+            <p class="err" id="e-method"></p>
+          </fieldset>
+          <button class="btn" type="submit">Continue to payment</button>
+        </form>
+        <aside class="box" id="summary"></aside>
+      </div>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
